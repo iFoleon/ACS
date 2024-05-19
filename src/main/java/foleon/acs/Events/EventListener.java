@@ -11,6 +11,5 @@ public class EventListener implements Listener {
     @EventHandler
     public void onPlayerJoin(PlayerJoinEvent event) {
         Player player = event.getPlayer();
-        player.sendMessage(ChatColor.GOLD + player.getName() + " присоединился к серверу!");
     }
 }

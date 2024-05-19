@@ -1,5 +1,6 @@
 foleon\acs\Commands\Commands.class
 foleon\acs\Cheats\Fly.class
+foleon\acs\Cheats\Speed.class
 foleon\acs\ACS$1.class
 foleon\acs\ACS.class
 foleon\acs\Cheats\Killaura.class

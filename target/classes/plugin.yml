@@ -1,6 +1,9 @@
 name: ACS
 version: '1.0'
 main: foleon.acs.ACS
+author: Foleon
+api-version: 1.0.0-APLHA
+description: ACS - Anti Cheat System
 commands:
   acs:
     description: крутая команда

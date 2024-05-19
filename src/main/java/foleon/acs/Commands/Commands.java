@@ -37,7 +37,7 @@ public class Commands implements CommandExecutor {
                     return true;
                 }
                 plugin.reloadConfig();
-                player.sendMessage(ChatColor.GREEN + "Конфигурация плагина успешно перезагружена.");
+                player.sendMessage(ChatColor.RED + "ACS" + ChatColor.GREEN + ": Конфигурация плагина успешно перезагружена.");
                 return true;
             } else if (args[0].equalsIgnoreCase("info")) {
                 player.sendMessage(ChatColor.GOLD + "Информация о плагине ACS:");

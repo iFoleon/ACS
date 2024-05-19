@@ -1,3 +1,7 @@
 name: ACS
 version: '1.0'
 main: foleon.acs.ACS
+commands:
+  acs:
+    description: крутая команда
+    permission: acs.use

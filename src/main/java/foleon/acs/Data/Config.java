@@ -96,4 +96,7 @@ public class Config {
     public Object getConfigValue(String key) {
         return configData.get(key);
     }
+
+    public void getWarnMessage() {
+    }
 }

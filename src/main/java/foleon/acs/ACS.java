@@ -1,17 +1,16 @@
 package foleon.acs;
 
-import org.bukkit.event.Listener;
+import foleon.acs.Commands.Commands;
 import org.bukkit.plugin.java.JavaPlugin;
 import foleon.acs.Cheats.Killaura;
-import foleon.acs.Data.Warns;
 import foleon.acs.Data.Config;
+import foleon.acs.Events.EventListener;
 import org.bukkit.Bukkit;
 
 public final class ACS extends JavaPlugin {
     private static ACS instance;
     private Killaura killaura;
     private Config config;
-
 
     @Override
     public void onEnable() {
@@ -23,8 +22,10 @@ public final class ACS extends JavaPlugin {
             @Override
             public void run() {
                 killaura.resetWarnCount();
-            }
+                }
         }, 0L, 600L);
+        getServer().getPluginManager().registerEvents(new EventListener(), this);
+        getCommand("acs").setExecutor(new Commands(this));
     }
 
     @Override

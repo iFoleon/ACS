@@ -25,13 +25,6 @@ public class Warns extends JavaPlugin {
         }, 0, 20 * 30);
     }
 
-    public void addWarn(Player player) {
-        UUID uuid = player.getUniqueId();
-        int warnsCount = warnsMap.getOrDefault(uuid, 0) + 1;
-        warnsMap.put(uuid, warnsCount);
-        sendWarnNotification(player);
-    }
-
     private void sendWarnNotification(Player player) {
         for (Player onlinePlayer : Bukkit.getOnlinePlayers()) {
             if (onlinePlayer.hasPermission("ACS.Owner")) {

@@ -1,3 +1,7 @@
 name: ACS
 version: '${project.version}'
 main: foleon.acs.ACS
+commands:
+  acs:
+    description: крутая команда
+    permission: acs.use

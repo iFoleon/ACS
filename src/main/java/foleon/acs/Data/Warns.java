@@ -22,7 +22,7 @@ public class Warns extends JavaPlugin {
                     warnsMap.remove(uuid);
                 }
             }
-        }, 0, 20 * 30); // Каждые 30 секунд
+        }, 0, 20 * 30);
     }
 
     public void addWarn(Player player) {

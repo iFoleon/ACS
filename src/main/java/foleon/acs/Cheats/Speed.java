@@ -8,7 +8,7 @@ import org.bukkit.event.player.PlayerMoveEvent;
 
 public class Speed implements Listener {
 
-    private double maxSpeed = 0.25;
+    private double maxSpeed = 0.3;
 
     @EventHandler
     public void onPlayerJoin(PlayerJoinEvent event) {

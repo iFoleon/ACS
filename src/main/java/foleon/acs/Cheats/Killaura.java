@@ -1,5 +1,6 @@
 package foleon.acs.Cheats;
 
+import org.bukkit.Bukkit;
 import org.bukkit.entity.Entity;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
@@ -32,12 +33,19 @@ public class Killaura implements Listener {
                     event.setCancelled(true);
                     if (warnCount >= 3) {
                         event.setCancelled(true);
-                        player.kickPlayer("Вы нарушили правила сервера (Killaura)");
+                        player.kickPlayer(ChatColor.RED + "[ACS] " + ChatColor.WHITE + "вы были исключены из-за подозрения в читерстве (Killaura)");
                         warnCountMap.remove(player.getUniqueId());
+                        Bukkit.broadcastMessage(ChatColor.RED + "[ACS]" + ChatColor.YELLOW + "Игрок " + player.getName() + " был исключен с сервера из-за подозрения в использовании Killaura.");
                     } else {
                         int warnMessage = 3 - warnCount;
                         player.sendMessage(ChatColor.RED + "Внимание! Вы были предупреждены за использование Killaura. Если вы получите еще " + warnMessage + " предупреждения, вы будете исключены с сервера.");
                         warnCountMap.put(player.getUniqueId(), warnCount);
+                        Set<Player> owners = (Set<Player>) Bukkit.getOnlinePlayers();
+                        for (Player owner : owners) {
+                            if (owner.hasPermission("acs.owner")) {
+                                owner.sendMessage(ChatColor.YELLOW + "Игрок " + player.getName() + " получил предупреждение за использование Killaura.");
+                            }
+                        }
                     }
                 }
             }

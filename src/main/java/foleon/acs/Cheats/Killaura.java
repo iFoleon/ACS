@@ -38,7 +38,6 @@ public class Killaura implements Listener {
                         Bukkit.broadcastMessage(ChatColor.RED + "[ACS]" + ChatColor.YELLOW + "Игрок " + player.getName() + " был исключен с сервера из-за подозрения в использовании Killaura.");
                     } else {
                         int warnMessage = 3 - warnCount;
-                        player.sendMessage(ChatColor.RED + "Внимание! Вы были предупреждены за использование Killaura. Если вы получите еще " + warnMessage + " предупреждения, вы будете исключены с сервера.");
                         warnCountMap.put(player.getUniqueId(), warnCount);
                         Set<Player> owners = (Set<Player>) Bukkit.getOnlinePlayers();
                         for (Player owner : owners) {

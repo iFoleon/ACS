@@ -11,7 +11,7 @@ public class Fly {
     public void onPlayerMove(PlayerMoveEvent event) {
         Player player = event.getPlayer();
         if (player.getAllowFlight() && !player.isOp()) {
-            player.kickPlayer(ChatColor.RED + "Ты не имеешь права летать! Опку можно купить на сайте brawlstars.net");
+            player.kickPlayer(ChatColor.RED + "Ты не имеешь права летать! Опку можно купить на сайте brawlstars.net!");
         }
     }
 }
